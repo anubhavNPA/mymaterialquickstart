@@ -20,9 +20,10 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
       
-       '@angular/material': 'npm:@angular/material/material.umd.js',
+       '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
 
       // other libraries
+      'hammerjs':                  'npm:hammerjs',
       'rxjs':                      'npm:rxjs'
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -32,6 +33,9 @@
         defaultExtension: 'js'
       },
       rxjs: {
+        defaultExtension: 'js'
+      },
+      hammerjs: {
         defaultExtension: 'js'
       }
     }
