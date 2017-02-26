@@ -12,7 +12,7 @@ import { HomeService }    from './components/home/home.service';
 import 'hammerjs/hammer';
 
 @NgModule({
-  imports:      [ routing, FormsModule, BrowserModule, MaterialModule.forRoot() ],
+  imports:      [ routing, FormsModule, BrowserModule, MaterialModule ],
   declarations: [ AppComponent, SomeComponent, HomeComponent ],
   providers:    [ appRoutingProviders, HomeService ],
   bootstrap:    [ AppComponent ]

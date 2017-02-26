@@ -1,5 +1,15 @@
 <h1>Hello from Material Home Component</h1>
 <p>{{message}}<p>
+  <md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{tile.text}}
+  </md-grid-tile>
+</md-grid-list>
+<br>
   <button md-icon-button [mdMenuTriggerFor]="menu">
   <md-icon>more_vert</md-icon>
 </button>
