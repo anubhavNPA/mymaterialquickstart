@@ -8,9 +8,14 @@
   <md-progress-bar></md-progress-bar>
   <br>
   <md-card class="sliderBox">
-          <md-card-content>
-            <h2>Loan Settlement Limits</h2>
-            <md-slider min="0" max="100" step="1" value="0" thumb-label ="true" name="discountSlider"
-              ></md-slider>
-          </md-card-content>
-        </md-card>
+    <md-card-content>
+      <h2>Loan Settlement Limits</h2>
+      <md-slider min="0" max="100" step="1" thumb-label ="true" name="discountSlider" [(ngModel)]="slider1Value" (change)="onChange()" ></md-slider>
+    </md-card-content>
+    <br>
+    <p>{{slider1Value}}</p>
+    <input [(ngModel)]="slider1Value">
+  </md-card>
+  <md-slider min="0" max="100" step="1" thumb-label ="true" name="discountSlider"  [(ngModel)]="slider2Value" (change)="onChange()" ></md-slider>
+  <input [(ngModel)]="slider2Value">
+  <p>calculated amount = {{savedAmount}}</p>
