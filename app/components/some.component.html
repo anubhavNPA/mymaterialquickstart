@@ -1,5 +1,48 @@
 <h1>Hello from Some Angular Component</h1>
-<p>add stuff here<p>
+<h4> display some date</h4>
+<p>{{timestamp}}</p>
+<br>
+<!--th class="sorting_asc" tabindex="0" aria-controls="defaultersTable" rowspan="1" colspan="1" aria-label="ID: activate to sort column descending" aria-sort="ascending">ID</th-->
+<md-data-table [selectable]="true">
+  <thead>
+  <!--tr md-data-table-header-selectable-row style="background-color: lightblue"-->
+    <tr md-data-table-header-selectable-row >
+    <th class="md-text-cell" sortable="true" style="background-color: lightblue; border-bottom-color: black; border-color: black"  >Material</th>
+    <th sortable="true" style="background-color: lightblue">Quantity</th>
+    <th sortable="true"style="background-color: lightblue">Unit price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let material of materials"  md-data-table-selectable-row [selectable-value]="material.name" style="border-bottom-color: black; border-top-color: black" >
+    <td class="md-text-cell">{{ material.name }}</td>
+    <td>{{ material.quantity }}</td>
+    <td>{{ material.price }}</td>
+  </tr>
+  </tbody>
+</md-data-table>
+
+
+<!-- PrimeNg or Angular2-Datatable
+<p>add stuff here<p><br><p> primeNg section</p>
+  <!--button type="button" pButton label="Click" icon="fa fa-check" (click)="onClick($event)"></button>
+  <button type="button" pButton label="Click" icon="fa fa-check"></button>
+
+  <h3>Checkbox</h3>
+<p>Multiple selection can also be handled using checkboxes by enabling the selectionMode property of column as "multiple".</p>
+<!--p-dataTable [value]="cars" [(selection)]="selectedCars2">
+  <p-dataTable>
+    <p-header>Single Selection</p-header>
+    <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+    <p-column field="vin" header="Vin"></p-column>
+    <p-column field="case" header="case"></p-column>
+    <p-footer>
+        <ul>
+            <li style="text-align: left">'car.vin' + ' - ' + 'car.case'</li>
+        </ul>
+    </p-footer>
+</p-dataTable>
+  <p> primeNg section end</p>
+  -->
     <br>
   <md-progress-spinner></md-progress-spinner>
   <br>

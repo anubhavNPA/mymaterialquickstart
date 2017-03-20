@@ -19,12 +19,17 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
+      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
       
-       '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
 
       // other libraries
       'hammerjs':                  'npm:hammerjs',
-      'rxjs':                      'npm:rxjs'
+      'rxjs':                      'npm:rxjs',
+      'primeng':                   'npm:primeng',
+      'angular2-datatable':        'npm:angular2-datatable',
+      'lodash':                    'npm:lodash/lodash.js',
+      'ng2-material':               'npm:ng2-material',
+
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -37,6 +42,17 @@
       },
       hammerjs: {
         defaultExtension: 'js'
+      },
+      primeng: {
+          defaultExtension: 'js'
+      },
+      'angular2-datatable': {
+          main: 'index.js',
+          defaultExtension: 'js'
+      },
+      'ng2-material': {
+          main: 'index.js',
+          defaultExtension: 'js'
       }
     }
   });
