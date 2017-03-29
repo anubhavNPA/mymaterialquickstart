@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { ContactInfo } from '../contact-info';
+import { Http, Headers }                from '@angular/http';
+import { NgForm }                       from '@angular/forms';
+import 'rxjs/add/operator/map';
+
 
 @Component({
   moduleId: module.id,
@@ -15,6 +19,26 @@ export class SomeComponent  {
   timestamp: Date;
   contactInfo1: ContactInfo;
   materials: any [];
+  nameProject = 'Moneytor RuleEngine';
+    value1 = 2;
+    materialgender: string;
+    someRule: any;
+    DPDvalue: number;
+    DefaultAmount: number;
+    loanTypes = ['home', 'auto', 'credit card', 'personal'];
+    selectedLoanType: string;
+    //createdRule = new Rule('', '' , false, 'male', 'loantype', '0%');
+    showModal = false;
+    buttonRed = true;
+    tiles = [
+    {text: 'One i dont think i want to be here', cols: 1, rows: 1, color: 'lightblue'},
+    {text: 'One i dont think i want to be here', cols: 1, rows: 1, color: 'lightblue'},
+    {text: 'One i dont think i want to be here', cols: 1, rows: 1, color: 'lightblue'},
+    {text: 'One i dont think i want to be here', cols: 1, rows: 1, color: 'lightblue'},
+    {text: 'Two some things look worse with time', cols: 1, rows: 1, color: 'lightgreen'},
+    {text: 'Three or four doesnt matter', cols: 1, rows: 1, color: 'lightpink'},
+    {text: 'Four i dont know why i am here', cols: 2, rows: 1, color: '#DDBDF1'},
+  ];
 
   constructor() {
     this.slider1Value=1;

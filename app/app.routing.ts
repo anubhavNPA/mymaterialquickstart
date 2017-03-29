@@ -4,12 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent }         from './app.component';
 import { HomeComponent }        from './components/home/home.component';
 import { SomeComponent }        from './components/some.component';
+import { DialogComponent }      from './components/dialog/dialog.component';
+
 
 const appRoutes: Routes = [
   // Routes without authentication guards
-  { path: '', component: SomeComponent },
+  { path: '', component: DialogComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'some', component: SomeComponent }
+  { path: 'some', component: SomeComponent },
+  { path: 'dialog', component: DialogComponent }
 
   // Routes with authentication guards
   /*

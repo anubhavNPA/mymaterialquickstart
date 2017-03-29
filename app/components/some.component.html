@@ -20,6 +20,21 @@
   </tr>
   </tbody>
 </md-data-table>
+<h4>Bring your new Material Component</h4>
+<md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{tile.text}}
+  </md-grid-tile>
+</md-grid-list>
+<br>
+<div class="container" margin-bottom=20px>
+  <h1 class="rulepageH1" >Moneytor Rules Form</h1>
+  <h2 class="rulepageH1" >Form for Default Data</h2>
+</div>
 
 
 <!-- PrimeNg or Angular2-Datatable
