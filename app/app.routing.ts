@@ -5,6 +5,7 @@ import { AppComponent }         from './app.component';
 import { HomeComponent }        from './components/home/home.component';
 import { SomeComponent }        from './components/some.component';
 import { DialogComponent }      from './components/dialog/dialog.component';
+import { ConnectorComponent }      from './components/connector/connector.component';
 
 
 const appRoutes: Routes = [
@@ -12,7 +13,8 @@ const appRoutes: Routes = [
   { path: '', component: DialogComponent },
   { path: 'home', component: HomeComponent },
   { path: 'some', component: SomeComponent },
-  { path: 'dialog', component: DialogComponent }
+  { path: 'dialog', component: DialogComponent },
+  { path: 'connector', component: ConnectorComponent }
 
   // Routes with authentication guards
   /*
