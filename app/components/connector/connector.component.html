@@ -1,2 +1,18 @@
 <p>COonnector</p>
+<md-toolbar color="primary">
+    material-todo
+    <button md-fab class="fab-add" (click)="todoDialog()">
+      <md-icon>add</md-icon>
+    </button>
+  </md-toolbar>
 <button md-button (click)="openDialog()">Open dialog</button>
+You chose: {{selectedOption}}
+
+<dialog [title]="'New Task'"
+            [title]="'Enter Task:'"
+            [placeholder]="'What do you need to do?'"
+            [okText]="okButtonText"
+            [value]="fieldValue"
+            (valueEmitted)="update($event)"
+            [showPrompt]="showDialog">
+</dialog>

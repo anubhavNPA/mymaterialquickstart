@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 import { ConnectorService } from './connector.service';
 
 @Component({
@@ -7,4 +7,6 @@ import { ConnectorService } from './connector.service';
     selector: 'connector-dialog',
     templateUrl: 'connector-dialog.html',
 })
-export class ConnectorDialog {}
+export class ConnectorDialog {
+    constructor(public dialogRef: MdDialogRef<ConnectorDialog>) {}
+}

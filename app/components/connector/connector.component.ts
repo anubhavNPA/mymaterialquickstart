@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { ConnectorDialog} from './connector-dialog.component';
 import { ConnectorService } from './connector.service';
@@ -11,13 +11,33 @@ import { ConnectorService } from './connector.service';
   styleUrls: ['connector.component.css']
 })
 export class ConnectorComponent  { 
- 
+  selectedOption: string; 
+  showDialog: boolean;
   constructor(private connectorService: ConnectorService,
                 public dialog: MdDialog) {
+                  this.showDialog = false;
   }
 
    openDialog() {
-    this.dialog.open(ConnectorDialog);
+    let dialogRef = this.dialog.open(ConnectorDialog);
+    dialogRef.afterClosed().subscribe(result => {
+      this.selectedOption = result;
+    });
+    //this.dialog.open(DialogOverviewExampleDialog);
+  }
+
+  todoDialog(){
+    console.log('button clicked');
+    this.showDialog = true;
+}
+  update(e: any) {
+    console.log('value');
   }
 }
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: './dialog-overview-example-dialog.html',
+})
+export class DialogOverviewExampleDialog {}
 

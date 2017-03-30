@@ -1,9 +1,21 @@
-<h1>Modal Dialog</h1>
-<p>Modal Dialog</p>
-<h1>Modal Dialog</h1>
-<h1>Modal Dialog</h1>
-<h1>Modal Dialog</h1>
-
-
-<h3>Hello from Material Home Component</h3>
-Hello from Material Home Component
+<div class="overlay" *ngIf="showPrompt">
+  <md-card class="modalDialog">
+    <md-toolbar color="primary">
+      {{title}}
+    </md-toolbar>
+    <md-card-content>
+      <br>{{message}}<br><br>
+      <md-input-container class="full-width">
+        <input mdInput [placeholder]="placeholder"
+               [(ngModel)]="value"
+               (keyup.enter)="emitValue(value)"
+               (keyup.escape)="emitValue(null)"/>
+      </md-input-container>
+    </md-card-content>
+    <md-card-actions class="center">
+        <button md-button color="primary">loudoo</button>
+      <button md-button (click)="emitValue(null)" color="primary">{{cancelText}}</button>
+      <button md-raised-button (click)="emitValue(value)" color="primary">{{okText}}</button>
+    </md-card-actions>
+  </md-card>
+</div>
