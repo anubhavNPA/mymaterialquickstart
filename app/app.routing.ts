@@ -12,7 +12,7 @@ import { DialogDemo }           from './components/googledialog/dialog-demo';
 
 const appRoutes: Routes = [
   // Routes without authentication guards
-  { path: '', component: DialogDemo },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'some', component: SomeComponent },
   { path: 'dialog', component: DialogComponent },
